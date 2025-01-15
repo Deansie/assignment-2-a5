@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Deansie/assignment-2-a5#readme",
   "dependencies": {
     "express": "^4.21.2",
-    "fs.promises": "^0.1.2",
-    "handlebars": "^4.7.8"
+    "express-handlebars": "^8.0.1",
+    "fs.promises": "^0.1.2"
   }
 }
