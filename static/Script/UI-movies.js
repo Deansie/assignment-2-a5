@@ -1,5 +1,6 @@
 import { fetchAPI } from "./fetch.js"
 import { loadFrontPageContent } from "./main.js"
+import { showSoloMovie } from "./moviecard-solo.js"
 
 export async function createMovies() {
   try {
@@ -36,7 +37,7 @@ export async function createMovies() {
       //Listener when clicking on a movie
       movieDOM.addEventListener('click', () => {
         console.log('Clicked movie:', movieData.attributes.title)
-        showModal(movieData.attributes)
+        showSoloMovie(movieData.attributes)
       })
     
     })
@@ -50,7 +51,7 @@ export async function createMovies() {
     movieContainer.appendChild(errorMessage)
   }
 }
-
+/*
 // Function to show modal
 function showModal(movieData) {
   const modalContainer = document.querySelector('.movie-modal__container')
@@ -77,3 +78,4 @@ function showModal(movieData) {
     modalContainer.classList.remove('active')
   })
 }
+  */

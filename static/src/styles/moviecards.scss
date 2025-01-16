@@ -13,3 +13,19 @@
     color: white;
     padding-left: 1rem;
 }
+
+.movie__wrapper__solo {
+    display: none;
+}
+
+.movie__wrapper__solo.active {
+    display: block;
+}
+
+.movie__wrapper.inactive {
+    display: none;
+}
+
+.movie__wrapper__return.inactive {
+    display: none;
+}
