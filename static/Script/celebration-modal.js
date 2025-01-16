@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //Function to close the modal
   function closeModal() {
-    console.log('stänger modal...')
     const modal = document.querySelector('.celebration-modal_content')
     modal.remove() //remove the modal html from DOM
 

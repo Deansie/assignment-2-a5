@@ -1,7 +1,10 @@
+import { fetchAPI } from "./fetch.js"
+import { createMovies } from "./UI-movies.js"
+
 // Filtering logic for movie searching on frontpage
 let allMovies = []
 
-function debounce(func, delay) {
+export function debounce(func, delay) {
   let timeout
   return function (...args) {
     clearTimeout(timeout)
@@ -9,14 +12,13 @@ function debounce(func, delay) {
   }
 }
 
-async function initMovies() {
+export async function initMovies() {
   const movies = await fetchAPI()
-  console.log('Hittade filmer:', movies)
   allMovies = movies
-  createMovies()
+  createMovies(movies)
 }
 
-function executeSearch(query) {
+export function executeSearch(query) {
   console.log('Sökta filmer:', query)
   const filteredResults = allMovies.filter((movie) => {
     const matchesQuery =

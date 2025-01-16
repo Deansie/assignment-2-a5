@@ -1,17 +1,29 @@
-fetchAPI()
+const API = 'https://plankton-app-xhkom.ondigitalocean.app/api/movies'
 
-async function fetchAPI() {
-  const url = '/static/fake-MovieAPI.json'
+export async function fetchAPI() {
   try {
-    const response = await fetch(url)
+    const response = await fetch(`${API}`);
     if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`)
+      throw new Error(`Error! Status: ${response.status}`);
     }
-
-    const json = await response.json()
-    console.log(json)
-    return json.movies
+    const apiMovies = await response.json();
+    return apiMovies.data;
   } catch (error) {
-    console.error(error.message)
+    console.error('Error fetching movies', error);
+    throw error;
+  }
+}
+
+export async function fetchMovie(id) {
+  try {
+    const response = await fetch(`${API}/${id}`);
+    if (!response.ok) {
+      throw new Error(`Error! Status: ${response.status}`);
+    }
+    const apiMovies = await response.json();
+    return apiMovies.data;
+  } catch (error) {
+    console.error('Error fetching movies', error);
+    throw error;
   }
 }

@@ -13,16 +13,16 @@ document.getElementById('header__menu').addEventListener('click', async function
     createMovies(movies) // Call the function to display all movies
   }
 })
-
+/*
 async function fetchAPI() {
-  const url = '/static/fake-MovieAPI.json'
+  const url = 'https://plankton-app-xhkom.ondigitalocean.app/api/movies'
   try {
     const response = await fetch(url)
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`)
     }
     const data = await response.json()
-    return data.movies // Return the full list of movies
+    return data.data // Return the full list of movies
   } catch (error) {
     console.error('Error fetching API:', error.message)
   }
@@ -30,7 +30,6 @@ async function fetchAPI() {
 
 async function createMovies(movies) {
   try {
-    console.log('Movies:', movies) // Log fetched movies
 
     if (!Array.isArray(movies)) {
       throw new Error('Fetched data is not an array')
@@ -51,6 +50,8 @@ async function createMovies(movies) {
       movieDOM.classList.add('movie')
       movieDOM.setAttribute('id', 1 + i)
       movieContainer.appendChild(movieDOM)
+
+      
 
       const movieAgeLimit = document.createElement('span')
       movieAgeLimit.classList.add('movie__age-limit')
@@ -77,7 +78,11 @@ async function createMovies(movies) {
       movieDOM.addEventListener('click', () => {
         console.log('Clicked movie:', movieData.title)
         showModal(movieData)
+
+        
       })
+
+    
     }
   } catch (error) {
     console.error('Error fetching or displaying movies:', error)
@@ -86,5 +91,6 @@ async function createMovies(movies) {
     errorMessage.classList.add('error-message')
     errorMessage.innerHTML = 'Error loading movies.'
     movieContainer.appendChild(errorMessage)
-  }
+  } 
 }
+  */

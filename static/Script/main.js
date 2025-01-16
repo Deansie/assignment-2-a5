@@ -1,9 +1,11 @@
+import { initMovies } from "./filter.js"
+import { debounce } from "./filter.js"
+import { createMovies } from "./UI-movies.js"
+import { executeSearch } from "./filter.js"
+
 //Fetch FrontPage Content
 
-loadFrontPageContent()
-addFrontPageContent()
-
-async function loadFrontPageContent() {
+export async function loadFrontPageContent() {
   try {
     const contentResponse = await fetch('/static/FrontPage-content.json')
     if (!contentResponse.ok) throw new Error('Failed to load content')
@@ -35,7 +37,7 @@ async function loadFrontPageContent() {
   }
 }
 
-async function addFrontPageContent() {
+export async function addFrontPageContent() {
   const frontPageContent = await loadFrontPageContent()
 
   //HEADER
@@ -98,3 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
     createMovies()
   })
 })
+
+addFrontPageContent();

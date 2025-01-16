@@ -1,3 +1,5 @@
+import { loadFrontPageContent } from "./main.js"
+
 //FILTER BUTTONS MOBILE
 
 const moreFiltersBtn = document.querySelector('.mobile__filter-menu')
