@@ -9,16 +9,22 @@ app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", "./templates");
 
-app.get('/', async (req, res) => {
+app.get("/", async (req, res) => {
 
-    try {
-        const movie = await fetchMovie(req.params.id);
-        const movieContent = await showSoloMovie(movie);
-        req.render("movie", { movieContent });
-    } catch (error) {
-        res.render("404", { message: "Couldn't fetch movies"});
-    }
+    const movies = await fetchAPI();
+    res.render("home", { movies, isHomePage: true } );
 })
+
+app.get("movies/:movieId", async (req, res) => {
+    try {    
+        const movie = await fetchMovie(req.params.movieId)
+        const { movieContent, returnButtonContent } = await showSoloMovie(movie);
+        res.render("movie", { movieContent, returnButtonContent, isHomePage: true });
+    } catch (error) {
+        console.error("Error fetching movie:", error);
+        res.status(500).send("Errpr fetching movie data");
+    }
+});
 
 app.use('/static', express.static('./static/'));
 app.use('/assets', express.static('./static/assets'));

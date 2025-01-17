@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
   </head>
   <body>
-    {{{body}}}
     <header class="header">
       <div class="header__logo">
         <h1 class="header__logo-title"></h1>
@@ -49,11 +48,11 @@
           <option value="Comedy" class="filter-genre__dropdown-comedy"></option>
         </select>
       </div>
-
       
-      <div class="movie__wrapper"></div>
-      <div class="movie__wrapper__solo"></div>
-      <div class="movie__wrapper__return"></div>
+      <body class="{{#if isHomePage}}home-page{{else if isSoloMovie}}solo-movie-page{{/if}}">
+        {{{body}}}
+        
+      </body>
       <div class="filter-btn__container">
         <button class="filter-btn__show-less" type="button"></button>
         <button class="filter-btn__show-all" type="button"></button>
@@ -121,6 +120,7 @@
     <script type="module" src="static/Script/moviecards-modal.js"></script>
     <script type="module" src="static/Script/filter-genre.js"></script>
     <script type="module" src="static/Script/moviecard-solo.js"></script>
-
+    <script type="module" src="static/Script/listener.js"></script>
+    
   </body>
 </html>
