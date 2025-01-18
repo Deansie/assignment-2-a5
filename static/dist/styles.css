@@ -521,18 +521,18 @@
 }
 
 .movie__wrapper__solo {
-  display: none;
-}
-
-.movie__wrapper__solo.active {
   display: flex;
   max-width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.movie__wrapper__solo.active img {
+.movie__wrapper__solo img {
   max-width: 100%;
+}
+
+.movie__wrapper__solo.active {
+  display: none;
 }
 
 .movie__wrapper.inactive {

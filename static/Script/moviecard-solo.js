@@ -2,9 +2,9 @@ export async function showSoloMovie(movieData) {
 
     const movieContent = `
       <div class="moviedata__div">
-        <div><h2>${movieData.title}</h2></div>
-        <div><img src="${movieData.image.url}" alt="${movieData.title}" class="movie-modal__poster"></div>
-        <div class="movie__description"><p><strong>Description:</strong> ${movieData.intro || 'No description available.'}</p></div>
+        <div><h2>${movieData.attributes.title}</h2></div>
+        <div><img src="${movieData.attributes.image.url}" alt="${movieData.attributes.title}" class="movie-modal__poster"></div>
+        <div class="movie__description"><p><strong>Description:</strong> ${movieData.attributes.intro || 'No description available.'}</p></div>
       </div>
     `
     const returnButtonContent = `
@@ -17,4 +17,7 @@ export async function showSoloMovie(movieData) {
         movieContent,
         returnButtonContent
     };
+
+    
 }
+

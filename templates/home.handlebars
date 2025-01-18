@@ -1,9 +1,16 @@
 <div class="movie__wrapper">
     {{#each movies}}
         <div class="movie-card">
-            <h2>{{this.title}}</h2>
-            <p>{{this.intro}}</p>
-            <a href="/movie/{{this.id}}"></a>
+            <a href="/movies/{{ this.id }}">
+                <div class="movie__image">
+                {{#if this.attributes.image }}
+                <img src="{{ this.attributes.image.url }}">
+                {{/if}}
+                </div>
+                <div>
+                    <h2>{{this.attributes.title}}</h2>
+                </div>
+            </a>
         </div>
     {{/each}}    
 </div>

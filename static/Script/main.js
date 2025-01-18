@@ -1,6 +1,6 @@
 import { initMovies } from "./filter.js"
 import { debounce } from "./filter.js"
-import { createMovies } from "./UI-movies.js"
+// import { createMovies } from "./UI-movies.js"
 import { executeSearch } from "./filter.js"
 
 //Fetch FrontPage Content
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (query.length >= 3) {
       executeSearch(query)
     } else if (query.length === 0) {
-      createMovies()
+     // createMovies()
     } else {
       console.log('För kort sökfras')
     }
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   clearButton.addEventListener('click', function () {
     searchInput.value = ''
     searchInput.focus()
-    createMovies()
+   // createMovies()
   })
 })
 

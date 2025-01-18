@@ -1,5 +1,5 @@
 import { fetchAPI } from "./fetch.js"
-import { createMovies } from "./UI-movies.js"
+// import { createMovies } from "./UI-movies.js"
 
 // Filtering logic for movie searching on frontpage
 let allMovies = []
@@ -15,7 +15,7 @@ export function debounce(func, delay) {
 export async function initMovies() {
   const movies = await fetchAPI()
   allMovies = movies
-  createMovies(movies)
+ // createMovies(movies)
 }
 
 export function executeSearch(query) {

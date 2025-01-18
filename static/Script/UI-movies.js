@@ -1,3 +1,4 @@
+/*
 import { fetchAPI } from "./fetch.js"
 import { loadFrontPageContent } from "./main.js"
 import { showSoloMovie } from "./moviecard-solo.js"
@@ -51,6 +52,9 @@ export async function createMovies() {
     movieContainer.appendChild(errorMessage)
   }
 }
+
+*/
+
 /*
 // Function to show modal
 function showModal(movieData) {

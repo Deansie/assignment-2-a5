@@ -1,5 +1,5 @@
 import { fetchAPI } from "./fetch.js"
-import { createMovies } from "./UI-movies.js"
+// import { createMovies } from "./UI-movies.js"
 /*
 document.getElementById('header__children-movies').addEventListener('click', async function () {
   const movies = await fetchAPI() // Fetch movies

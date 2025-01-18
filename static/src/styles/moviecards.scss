@@ -15,11 +15,6 @@
 }
 
 .movie__wrapper__solo {
-    display: none;
-}
-
-.movie__wrapper__solo.active {
-
     display: flex;
     max-width: 100%;
     justify-content: center;
@@ -29,6 +24,11 @@
     img {
         max-width: 100%;
     }
+}
+
+.movie__wrapper__solo.active {
+
+    display: none;
 
 }
 
