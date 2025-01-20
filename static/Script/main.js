@@ -1,7 +1,7 @@
-import { initMovies } from "./filter.js"
-import { debounce } from "./filter.js"
+// import { initMovies } from "./filter.js"
+// import { debounce } from "./filter.js"
 // import { createMovies } from "./UI-movies.js"
-import { executeSearch } from "./filter.js"
+// import { executeSearch } from "./filter.js"
 
 //Fetch FrontPage Content
 
@@ -76,7 +76,7 @@ export async function addFrontPageContent() {
   document.querySelector('.footer__find-Us-postalcode').innerHTML = frontPageContent.footer.findUsPostalCode
   document.querySelector('.footer__find-Us-country').innerHTML = frontPageContent.footer.findUsCountry
   document.querySelector('.footer__partners-title').innerHTML = frontPageContent.footer.partnersTitle
-}
+} /*
 // Eventlistener for search input
 document.addEventListener('DOMContentLoaded', () => {
   initMovies()
@@ -100,5 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
    // createMovies()
   })
 })
-
+*/
 addFrontPageContent();

@@ -1,14 +1,14 @@
-<div class="movie__wrapper__solo active">
-     <div class="movie-card">
+<div class="movie__wrapper__solo">
+    <div class="movie-card">
         <h2>{{movie.attributes.title}}</h2>
-        {{#if movie.attributes.image }}
-        <img src="{{ movie.attributes.image.url }}">
-        {{/if}}
-        <div class="intro">
-            {{ movie.attributes.intro }}
-        </div>
+            <div class="movie-card__intro">
+                {{ movie.attributes.intro }}
+            </div>
+            {{#if movie.attributes.image }}
+            <img src="{{ movie.attributes.image.url }}">
+            {{/if}}
+           <div>
+        <a href="/">Tillbaka</a>
+    </div>
+</div>
 
-</div>
-<div class ="movie__wrapper__return active">
-    {{{returnButtonContent}}}
-</div>

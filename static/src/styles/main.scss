@@ -1,4 +1,4 @@
-@use 'celebration-modal' as cm;
+
 @use 'footer.scss';
 @use 'header.scss';
 @use 'UI-dateFilter';
@@ -49,7 +49,7 @@ footer {
 .search__container {
   // Styling for search container
   margin: auto;
-  display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   text-align: center;

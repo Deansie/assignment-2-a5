@@ -1,6 +1,6 @@
-import { fetchAPI } from "./fetch.js"
-// import { createMovies } from "./UI-movies.js"
-/*
+/* import { fetchAPI } from "./fetch.js"
+import { createMovies } from "./UI-movies.js"
+
 document.getElementById('header__children-movies').addEventListener('click', async function () {
   const movies = await fetchAPI() // Fetch movies
   if (movies) {
@@ -9,7 +9,7 @@ document.getElementById('header__children-movies').addEventListener('click', asy
     createMovies(pg13Movies) // Call the function to display PG-13 movies
   }
 })
-*/
+
 
 document.getElementById('header__menu').addEventListener('click', async function () {
   const movies = await fetchAPI() // Fetch all movies
@@ -17,3 +17,5 @@ document.getElementById('header__menu').addEventListener('click', async function
     createMovies(movies) // Call the function to display all movies
   }
 })
+
+*/

@@ -1,4 +1,4 @@
-import { fetchAPI } from "./fetch.js"
+/* import { fetchAPI } from "./fetch.js"
 // import { createMovies } from "./UI-movies.js"
 
 // Filtering logic for movie searching on frontpage
@@ -81,3 +81,5 @@ document.querySelector('.search__input').addEventListener('input', (e) => {
     movieContainer.innerHTML = '' //Clearing results
   }
 })
+
+*/

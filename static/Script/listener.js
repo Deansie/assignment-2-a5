@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
 
     const soloMovieContainer = document.querySelector('.movie__wrapper__solo');
     const movieContainer = document.querySelector('.movie__wrapper');
@@ -48,5 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     }
 })
+    */
 
 

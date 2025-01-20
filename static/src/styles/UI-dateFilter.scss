@@ -20,7 +20,7 @@
 }
 
 .filter-btn__container {
-  display: flex;
+  display: none;
   justify-content: center;
   gap: 25px;
   position: relative;
@@ -136,6 +136,10 @@
 
 .date__close-btn:hover {
   color: darkblue;
+}
+
+.filter-genre__container {
+  display: none;
 }
 
 //ADD ONS
